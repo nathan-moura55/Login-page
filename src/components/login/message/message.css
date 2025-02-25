@@ -1,0 +1,14 @@
+.container-message {
+    width: 500px;
+    background-color: rgb(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 50px;
+    border-radius: 10px;
+} 
+
+.container-message h1 {
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+}

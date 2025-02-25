@@ -1,5 +1,4 @@
-import './message.css';
-
+import "./message.css"
 const Message = () => {
     return (
         <div className="container-message">
