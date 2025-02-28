@@ -1,24 +1,29 @@
 import { FaUser, FaLock } from 'react-icons/fa';
 import { useState } from 'react';
 import "./login.css";
+import { useNavigate } from 'react-router-dom';
+import '../../../App.css'
 
 const Login = () => {
 
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const navigate = useNavigate();
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        alert("enviando os dados: e-mail: " + username + " - senha: " + password);
+    const handleLogin = () => {
+        if (username === 'admin' && password === 'batatinha123') {
+            navigate('/message');
+        } else {
+            alert('Usuário ou senha inválidos');
+        };
     };
-
     return (
         <div className="container">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleLogin}>
                 <h1>Login</h1>
                 <div className="input-field">
-                    <input type="email"
-                        placeholder="E-mail"
+                    <input type="username"
+                        placeholder="Username"
                         onChange={(e) => setUsername(e.target.value)} />
                     <FaUser className="icon" />
                 </div>
@@ -36,7 +41,7 @@ const Login = () => {
                     </label>
                     <a href="#"> Esqueceu a senha?</a>
                 </div>
-                <button>Entrar </button>
+                <button onClick={handleLogin}>Entrar</button>
                 <div className="signup-link">
                     <p>
                         Não tem uma conta? <a href="#">Registrar</a>
