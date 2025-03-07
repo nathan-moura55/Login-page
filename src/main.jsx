@@ -6,6 +6,7 @@ import Login from './components/login/login/login.jsx'
 import Message from './components/login/message/message.jsx'
 import Error from './components/login/error/page-error.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Register from './components/login/register/register.jsx'
 
 const router = createBrowserRouter([
   {
@@ -14,12 +15,17 @@ const router = createBrowserRouter([
   },
   {
     path: '/',
-    element: <Login />,
+    element: <Login />
   },
   {
     path: "/message",
     element: <Message />
+  },
+  {
+    path: "/register",
+    element: <Register />
   }
+
 ]);
 
 createRoot(document.getElementById('root')).render(

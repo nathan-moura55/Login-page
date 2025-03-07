@@ -1,7 +1,7 @@
 import { FaUser, FaLock } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
 import "./login.css";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import '../../../App.css'
 
 const Login = () => {
@@ -77,10 +77,11 @@ const Login = () => {
 
                 <div
                     className="signup-link">
+                <Link to="/register">
                     <p>
-                        Não tem uma conta? <a href="#">Registrar</a>
+                        Não tem uma conta? <a href="/register">Registrar</a>
                     </p>
-
+                </Link>
                 </div>
             </form>
         </div>
