@@ -29,7 +29,7 @@ const Register = () => {
         <div className="container-register">
             <h2>Registro de Usuário</h2>
             {erro && <p style={{ color: 'red' }}>{erro}</p>}
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className='register-form'>
                 <div>
                     <label>Nome:</label>
                     <input
